@@ -1,0 +1,41 @@
+<!-- add_product.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Product</title>
+</head>
+
+<body>
+    <h1>Add Product</h1>
+    <form method="POST" action="/add_product" enctype="multipart/form-data">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="1" required><br><br>
+
+        <label for="name">Description:</label>
+        <input type="text" id="description" name="description" required><br><br>
+
+        <label for="name">Category</label>
+        <input type="text" id="category" name="category" required><br><br>
+
+        <label for="image_file">Image File:</label>
+        <input type="text" id="image_file" name="image_file" required><br><br>
+
+        <label for="image_file">Sub-Image File1:</label>
+        <input type="text" id="image_file" name="image_file1" required><br><br>
+
+        <label for="image_file">Sub-Image File2:</label>
+        <input type="text" id="image_file" name="image_file2" required><br><br>
+
+        <label for="image_file">Sub-Image File3:</label>
+        <input type="text" id="image_file" name="image_file3" required><br><br>
+
+        <input type="submit" value="Add Product">
+    </form>
+</body>
+
+</html>

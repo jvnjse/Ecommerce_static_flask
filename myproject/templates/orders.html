@@ -1,0 +1,72 @@
+<!-- orders.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Orders</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>DATABASE</h1>
+    <div class="orders">
+        <h2>Orders</h2>
+        <table>
+            <tr>
+                <th>order id</th>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>address_line1</th>
+                <th>address_line2</th>
+                <th>pin</th>
+                <th>city</th>
+                <th>state</th>
+                <th>country</th>
+                <th>products ordered</th>
+            </tr>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.first_name }}</td>
+                <td>{{ order.last_name }}</td>
+                <td>{{ order.address_line1}}</td>
+                <td>{{ order.address_line2}}</td>
+                <td>{{ order.pin}}</td>
+                <td>{{ order.city}}</td>
+                <td>{{ order.state}}</td>
+                <td>{{ order.country}}</td>
+                <td>{{ order.products_string}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <h2>Products</h2>
+        <table>
+            <tr>
+                <th>poduct id</th>
+                <th>product name</th>
+                <th>product price</th>
+                <th>product description</th>
+                <th>product category</th>
+                <th>image 1</th>
+                <th>image 2</th>
+                <th>image 3</th>
+                <th>image 4</th>
+            </tr>
+            {% for product in product %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price}}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.category}}</td>
+                <td>{{ product.image_file}}</td>
+                <td>{{ product.image_file1}}</td>
+                <td>{{ product.image_file2}}</td>
+                <td>{{ product.image_file3}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
